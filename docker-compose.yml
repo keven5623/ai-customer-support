@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  laravel:
+    build: ./backend
+    container_name: laravel-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/var/www/html
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  vue:
+    build: ./frontend
+    container_name: vue-frontend
+    ports:
+      - "5174:5173"
+    volumes:
+      - ./frontend:/app
+      - vue_node_modules:/app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  vue_node_modules:

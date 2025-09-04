@@ -1,0 +1,34 @@
+# =========================
+# Laravel / backend
+# =========================
+/backend/vendor/
+/backend/node_modules/
+# 環境變數
+/backend/.env
+# storage 產生的快取、log、session
+/backend/storage/
+# Laravel IDE Helper
+/backend/_ide_helper.php
+/backend/_ide_helper_models.php
+
+# =========================
+# Vue / frontend
+# =========================
+/frontend/node_modules/
+# 編譯後的產出
+/frontend/dist/
+/frontend/.env
+
+# =========================
+# Docker & 系統
+# =========================
+docker-compose.override.yml
+.env
+*.log
+*.tmp
+
+# =========================
+# Mac / Windows 系統檔
+# =========================
+.DS_Store
+Thumbs.db
